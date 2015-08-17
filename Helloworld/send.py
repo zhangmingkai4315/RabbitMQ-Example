@@ -1,5 +1,6 @@
 import pika
 import secret
+
 connection=pika.BlockingConnection(pika.ConnectionParameters(host=secret.ipaddress))
 channel=connection.channel()
 channel.queue_declare(queue='hello');
